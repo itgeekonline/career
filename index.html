@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ITGEEK — Кар’єрна програма</title>
+
+<style>
+:root{
+  --bg:#efefef;
+  --primary:#1649ff;
+  --white:#fff;
+  --shadow:0 10px 30px rgba(22,73,255,.15);
+  --radius:16px;
+}
+
+body{
+  margin:0;
+  font-family:Inter, Arial;
+  background:var(--bg);
+  color:#0a0a0a;
+}
+
+.container{width:min(1100px,92%);margin:auto}
+
+section{
+  margin:90px 0;
+}
+
+header{
+  position:sticky;
+  top:0;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(10px);
+  padding:1rem 0;
+  border-bottom:1px solid #ddd;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav a{
+  margin:0 .6rem;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.btn{
+  background:var(--primary);
+  color:#fff;
+  padding:.7rem 1.2rem;
+  border-radius:999px;
+  border:none;
+  text-decoration:none;
+  display:inline-block;
+}
+
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:2rem;
+  padding:4rem 0;
+  margin-top:30px; /* 👈 ДОДАНО ВІДСТУП */
+}
+
+.hero h1{
+  font-size:2.6rem;
+  margin-bottom:1rem;
+}
+
+.highlight{color:var(--primary)}
+
+.card{
+  background:#fff;
+  padding:1.2rem;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+/* FLOW */
+.flow{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  justify-content:center;
+  margin-top:2rem;
+}
+
+.step{
+  background:#fff;
+  padding:1rem;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  min-width:150px;
+  text-align:center;
+  animation:float 3s infinite ease-in-out;
+}
+
+.step:nth-child(2){animation-delay:.2s}
+.step:nth-child(3){animation-delay:.4s}
+.step:nth-child(4){animation-delay:.6s}
+.step:nth-child(5){animation-delay:.8s}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+
+/* FACTS */
+.facts{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1rem;
+}
+
+.fact{
+  background:#fff;
+  padding:1rem;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+
+/* ACCORDION */
+.acc{
+  background:#fff;
+  margin-bottom:1rem;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.acc h3{
+  margin:0;
+  padding:1rem;
+  cursor:pointer;
+  background:#f4f6ff;
+  display:flex;
+  justify-content:space-between;
+}
+
+.acc p{
+  margin:0;
+  max-height:0;
+  overflow:hidden;
+  padding:0 1rem;
+  transition:.4s;
+  line-height:1.6;
+  color:#2a3555;
+}
+
+.acc.active p{
+  max-height:400px;
+  padding:1rem;
+}
+
+/* MENTOR */
+.mentor{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2rem;
+  align-items:center;
+  margin-top:3rem;
+}
+
+.mentor-img{
+  height:350px;
+  border-radius:16px;
+  overflow:hidden;
+  background:#ddd;
+}
+
+.mentor-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* CTA */
+.cta{
+  background:linear-gradient(135deg,#1649ff,#4b7bff);
+  color:#fff;
+  padding:2.5rem;
+  text-align:center;
+  border-radius:20px;
+  margin-top:3rem;
+}
+
+.cta .btn{
+  margin-top:20px;
+  background:#fff;
+  color:#1649ff;
+  font-weight:700;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr}
+  .mentor{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <b>ITGEEK</b>
+      <div>
+        <a href="#">Головна</a>
+        <a href="#career">Кар’єра</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>
+      Кар’єра в IT 💼 <br>
+      <span class="highlight">робота за 6 місяців</span>
+    </h1>
+
+    <p>
+      Повний шлях до першої роботи або стабільного онлайн доходу 🌍
+      Ми ведемо тебе від нуля до працевлаштування з ментором 🚀
+    </p>
+
+    <div class="card">
+      <b>🎯 Місія:</b>
+      <p>Допомогти тобі отримати першу роботу в IT або онлайн 💼</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+         style="width:100%;border-radius:12px">
+  </div>
+</section>
+
+<!-- FLOW -->
+<section>
+  <h2 style="text-align:center">Шлях до роботи 🚀</h2>
+
+  <div class="flow">
+    <div class="step">1️⃣ Профорієнтація</div>
+    <div class="step">2️⃣ Навчання</div>
+    <div class="step">3️⃣ CV + LinkedIn</div>
+    <div class="step">4️⃣ Співбесіди</div>
+    <div class="step">5️⃣ Робота 💼</div>
+  </div>
+</section>
+
+<!-- FACTS -->
+<section>
+  <h2 style="text-align:center">Факти про онлайн роботу 🌍</h2>
+
+  <div class="facts">
+    <div class="fact">📊 IT-ринок стабільно зростає щороку (в середньому 15–20% залежно від напряму та регіону)</div>
+    <div class="fact">💻 Значна частина компаній працює у форматі remote(онлайн) або hybrid</div>
+    <div class="fact">💰 Рівень зарплат Junior-спеціалістів стартує приблизно від 20 000 – 30 000 грн (залежно від напрямку та компанії)</div>
+    <div class="fact">🌍 Доступна можливість працювати з будь-якої точки світу</div>
+    <div class="fact">⏳ Гнучкий або адаптивний графік у багатьох IT-компаніях</div>
+    <div class="fact">🚀 Початок кар’єри в IT можливий без комерційного досвіду за умови якісної підготовки</div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section>
+<h2 style="text-align:center">Кар’єрна програма 📚</h2>
+
+<div class="acc"><h3 onclick="toggle(this)">1. Профорієнтація 🎯</h3>
+<p>Обираємо роль: QA, Support, No-code, Dev або Freelance. Аналіз сильних сторін і напрямку.</p></div>
+
+<div class="acc"><h3 onclick="toggle(this)">2. Навчання 📖</h3>
+<p>80% практика. Вчимо тільки те, що потрібно для роботи без зайвої теорії.</p></div>
+
+<div class="acc"><h3 onclick="toggle(this)">3. Кар’єрна упаковка 💼</h3>
+<p>CV, LinkedIn, портфоліо та супровідні листи — повна упаковка для пошуку роботи на рівні Junior-спеціаліста.</p></div>
+
+<div class="acc"><h3 onclick="toggle(this)">4. Співбесіди 🎤</h3>
+<p>Реальні питання, симуляції, підготовка відповідей і впевненість.</p></div>
+
+<div class="acc"><h3 onclick="toggle(this)">5. Пошук роботи 🚀</h3>
+<p>Подача заявок, стратегія, підтримка до першого оферу.</p></div>
+</section>
+
+<!-- MENTOR -->
+<section>
+<h2 style="text-align:center">Практикуючий ментор 👨‍💻</h2>
+
+<div class="mentor">
+
+  <div class="mentor-img">
+    <img src="https://i.postimg.cc/Prc2jhC3/IMG-5998.jpg">
+  </div>
+
+  <div>
+    <h3>Василь Горчак</h3>
+    <p>
+   Власник онлайн IT-школи, яка працює з 2016 року.
+Фрілансер з понад 5-річним досвідом роботи онлайн.
+Має повний практичний досвід проходження всіх етапів працевлаштування в IT:
+від створення резюме та підготовки до співбесід — до отримання першої роботи.<br><br>
+      Допомагає знайти першу роботу в IT 🚀<br>
+      Працює до результату — працевлаштування 💼
+    </p>
+  </div>
+
+</div>
+</section>
+
+<!-- CTA -->
+<section>
+<div class="cta">
+  <h2>💼 Гарантія результату</h2>
+  <p>Якщо немає результату — повертаємо кошти 🤝</p>
+
+  <a class="btn" href="https://forms.gle/Rw51jEoYcnw2WjuN9" target="_blank">
+    Залишити заявку 🚀
+  </a>
+</div>
+</section>
+
+</main>
+
+<script>
+function toggle(el){
+  el.parentElement.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
